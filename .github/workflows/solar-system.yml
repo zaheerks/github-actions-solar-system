@@ -31,3 +31,9 @@ jobs:
           with:
             name: Mocha-Test-Result
             path: test-results.xml
+      
+        - name: Cache NPM dependencies
+          uses: actions/cache@v4
+          with:
+            key: '${{ runner.os }}-node-modules-${{ hashFiles(''package-lock.json'') }}'
+            path: ~/.npm
