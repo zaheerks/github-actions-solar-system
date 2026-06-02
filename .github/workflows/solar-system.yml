@@ -10,6 +10,8 @@ on:
 jobs:
     unit-testing:
         name: Unit Testing
+        container:        #added
+        image: 'node:20' #added
         runs-on: ubuntu-latest
         steps:
         - name: Checkout Repository
